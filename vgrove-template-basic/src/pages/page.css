@@ -1,0 +1,127 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.welcome-section {
+  margin-bottom: 2rem;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.language-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.language-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.lang-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  border-color: #646cff;
+  background: #f8f9ff;
+}
+
+.lang-btn.active {
+  border-color: #646cff;
+  background: #646cff;
+  color: white;
+}
+
+.info-section {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.info-section p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .welcome-section h1 {
+    color: #fff;
+  }
+
+  .welcome-section p {
+    color: #ccc;
+  }
+
+  .language-section {
+    background: #1a1a1a;
+    border-color: #333;
+  }
+
+  .language-section h3 {
+    color: #fff;
+  }
+
+  .lang-btn {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+  }
+
+  .lang-btn:hover {
+    border-color: #646cff;
+    background: #2a2a3a;
+  }
+
+  .info-section {
+    background: #2a2a2a;
+  }
+
+  .info-section p {
+    color: #ccc;
+  }
+}

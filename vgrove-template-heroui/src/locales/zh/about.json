@@ -1,0 +1,31 @@
+{
+    "subtitle": "了解更多关于 @gulibs 生态系统以及这些包如何协同工作",
+    "packages": {
+        "title": "使用的包",
+        "description": "此示例演示了以下包的集成："
+    },
+    "features": {
+        "title": "功能特性",
+        "description": "此示例演示的关键功能：",
+        "fileBasedRouting": "基于文件的路由",
+        "internationalization": "国际化",
+        "routeGuards": "路由守卫",
+        "middlewareSupport": "中间件支持",
+        "typescriptIntegration": "TypeScript 集成"
+    },
+    "gettingStarted": {
+        "title": "快速开始",
+        "step1": "安装依赖包",
+        "step2": "配置 Vite 插件",
+        "step3": "设置国际化资源",
+        "step4": "创建页面和句柄",
+        "step5": "添加守卫和中间件"
+    },
+    "documentation": {
+        "title": "文档",
+        "description": "获取更多信息：",
+        "github": "GitHub 仓库",
+        "docs": "文档",
+        "examples": "示例"
+    }
+}

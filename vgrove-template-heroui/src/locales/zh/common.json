@@ -1,0 +1,149 @@
+{
+    "app": {
+        "title": "自动路由示例",
+        "description": "一个具有自动路由和国际化功能的示例应用"
+    },
+    "nav": {
+        "home": "首页",
+        "about": "关于",
+        "dashboard": "仪表盘",
+        "auth": "认证",
+        "login": "登录",
+        "settings": "设置",
+        "smartDemo": "智能演示"
+    },
+    "common": {
+        "loading": "加载中...",
+        "error": "错误",
+        "success": "成功",
+        "cancel": "取消",
+        "confirm": "确认",
+        "save": "保存",
+        "edit": "编辑",
+        "delete": "删除",
+        "back": "返回",
+        "next": "下一页",
+        "previous": "上一页",
+        "search": "搜索",
+        "filter": "筛选",
+        "clear": "清除",
+        "submit": "提交",
+        "reset": "重置",
+        "close": "关闭",
+        "open": "打开",
+        "welcome": "欢迎",
+        "goodbye": "再见",
+        "language": "语言",
+        "switchLanguage": "切换语言"
+    },
+    "pages": {
+        "home": {
+            "title": "首页",
+            "description": "欢迎来到我们的应用",
+            "content": {
+                "welcome": "欢迎使用自动路由示例",
+                "subtitle": "这是一个演示自动路由和国际化功能的应用"
+            }
+        },
+        "about": {
+            "title": "关于我们",
+            "description": "了解更多关于我们应用的信息",
+            "content": {
+                "title": "关于这个应用",
+                "text": "这个应用演示了 @gulibs/vite-plugin-react-auto-routes 和 @gulibs/vite-auto-routes-client 的集成，具有自动路由生成和全面的国际化支持。"
+            }
+        },
+        "dashboard": {
+            "title": "仪表盘",
+            "description": "您的个人仪表盘",
+            "content": {
+                "welcome": "欢迎来到您的仪表盘，{name}！",
+                "stats": "统计数据",
+                "recentActivity": "最近活动",
+                "quickActions": "快速操作"
+            }
+        },
+        "auth": {
+            "login": {
+                "title": "登录",
+                "description": "登录到您的账户",
+                "form": {
+                    "email": "邮箱",
+                    "password": "密码",
+                    "remember": "记住我",
+                    "submit": "登录",
+                    "forgotPassword": "忘记密码？",
+                    "noAccount": "还没有账户？",
+                    "register": "注册"
+                },
+                "messages": {
+                    "success": "登录成功！",
+                    "error": "邮箱或密码错误",
+                    "required": "此字段为必填项"
+                }
+            }
+        }
+    },
+    "errors": {
+        "404": "页面未找到",
+        "403": "访问被拒绝",
+        "500": "内部服务器错误",
+        "network": "网络错误",
+        "unauthorized": "您无权访问此页面",
+        "sessionExpired": "您的会话已过期，请重新登录"
+    },
+    "navigation": {
+        "home": "首页",
+        "dashboard": "仪表板",
+        "profile": "个人资料",
+        "settings": "设置",
+        "about": "关于"
+    },
+    "actions": {
+        "save": "保存",
+        "cancel": "取消",
+        "delete": "删除",
+        "edit": "编辑",
+        "create": "创建",
+        "update": "更新",
+        "submit": "提交",
+        "back": "返回",
+        "next": "下一步",
+        "previous": "上一步"
+    },
+    "messages": {
+        "success": "操作成功完成",
+        "error": "发生错误",
+        "loading": "加载中...",
+        "noData": "暂无数据",
+        "confirmDelete": "您确定要删除此项目吗？",
+        "welcome": "欢迎来到 @gulibs 集成示例"
+    },
+    "forms": {
+        "validation": {
+            "required": "此字段为必填项",
+            "email": "请输入有效的电子邮件地址",
+            "password": "密码至少需要8个字符"
+        },
+        "labels": {
+            "name": "姓名",
+            "email": "邮箱",
+            "password": "密码"
+        }
+    },
+    "layout": {
+        "debug": {
+            "current": "当前"
+        },
+        "languages": {
+            "english": "English",
+            "chinese": "简体中文"
+        },
+        "debugInfo": {
+            "title": "调试信息",
+            "currentLocale": "当前语言",
+            "availableLocales": "可用语言",
+            "translationTest": "翻译测试"
+        }
+    }
+}

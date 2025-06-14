@@ -1,0 +1,20 @@
+{
+    "title": "Smart Translation Demo",
+    "description": "Experience the new smart translation features without manual namespace setup!",
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "dashboard": "Dashboard"
+    },
+    "examples": {
+        "basic": "Basic Translation",
+        "smart": "Smart Translation",
+        "auto": "Auto Translation"
+    },
+    "features": {
+        "autoDetection": "Auto Detection",
+        "fallbackSupport": "Fallback Support",
+        "debugMode": "Debug Mode",
+        "easyMigration": "Easy Migration"
+    }
+}

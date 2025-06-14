@@ -1,0 +1,49 @@
+{
+    "title": "@gulibs Ecosystem Debug Page",
+    "description": "This page is used to diagnose compatibility issues between @gulibs/vite-plugin-react-auto-routes, @gulibs/react-i18n and @gulibs/vite-auto-routes-client.",
+    "sections": {
+        "i18n": {
+            "title": "I18n Status",
+            "currentLocale": "Current Language",
+            "availableLocales": "Available Languages",
+            "isChanging": "Changing",
+            "error": "Error",
+            "resourceCount": "Resource Count"
+        },
+        "autoRoutes": {
+            "title": "Auto Routes Client",
+            "authStatus": "Authentication Status",
+            "authenticated": "Authenticated",
+            "notAuthenticated": "Not Authenticated",
+            "userData": "User Data"
+        },
+        "plugin": {
+            "title": "Route Plugin Status",
+            "routeGeneration": "Route Generation",
+            "normal": "Normal",
+            "pagePath": "Page Path",
+            "environment": "Environment"
+        }
+    },
+    "testActions": {
+        "title": "Test Actions",
+        "switching": "Switching...",
+        "switchTo": "Switch to",
+        "testResourceAccess": "Test Resource Access",
+        "reloadResources": "Reload Resources"
+    },
+    "translationTest": {
+        "title": "Translation Test"
+    },
+    "detailedInfo": {
+        "title": "Detailed Debug Information"
+    },
+    "error": {
+        "title": "Language Switch Error"
+    },
+    "common": {
+        "yes": "Yes",
+        "no": "No",
+        "none": "None"
+    }
+}

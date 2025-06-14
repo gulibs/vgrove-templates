@@ -1,0 +1,11 @@
+{
+    "common": {
+        "welcome": "欢迎",
+        "loading": "加载中...",
+        "language": "语言"
+    },
+    "app": {
+        "title": "VGrove 基础模板",
+        "description": "一个具有自动路由和国际化支持的现代 React 应用程序"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "subtitle": "This is a demonstration of the @gulibs ecosystem integration.",
+    "features": {
+        "autoRoutes": {
+            "title": "Auto Routes",
+            "description": "File-based routing with automatic route generation and TypeScript support."
+        },
+        "i18n": {
+            "title": "Internationalization",
+            "description": "Powerful i18n solution with namespace support and TypeScript integration.",
+            "currentLocale": "Current locale",
+            "switchTo": "Switch to"
+        },
+        "protection": {
+            "title": "Route Protection",
+            "description": "Advanced route guards, middleware, and authentication features."
+        }
+    },
+    "debug": {
+        "title": "Debug Information",
+        "welcomeMessage": "Welcome message",
+        "homeNavigation": "Home navigation",
+        "currentLocale": "Current locale"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "subtitle": "Learn more about the @gulibs ecosystem and how these packages work together",
+    "packages": {
+        "title": "Packages Used",
+        "description": "This example demonstrates the integration of:"
+    },
+    "features": {
+        "title": "Features",
+        "description": "Key features demonstrated in this example:",
+        "fileBasedRouting": "File-based routing",
+        "internationalization": "Internationalization",
+        "routeGuards": "Route guards",
+        "middlewareSupport": "Middleware support",
+        "typescriptIntegration": "TypeScript integration"
+    },
+    "gettingStarted": {
+        "title": "Getting Started",
+        "step1": "Install the packages",
+        "step2": "Configure Vite plugin",
+        "step3": "Set up i18n resources",
+        "step4": "Create pages with handles",
+        "step5": "Add guards and middleware"
+    },
+    "documentation": {
+        "title": "Documentation",
+        "description": "Find more information:",
+        "github": "GitHub Repository",
+        "docs": "Documentation",
+        "examples": "Examples"
+    }
+}

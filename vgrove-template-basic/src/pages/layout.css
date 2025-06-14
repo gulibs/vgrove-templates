@@ -1,0 +1,17 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  background: #f8f9fa;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .main {
+    background: #242424;
+  }
+}

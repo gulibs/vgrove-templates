@@ -1,0 +1,30 @@
+{
+    "title": "仪表板",
+    "welcome": "欢迎来到您的仪表板",
+    "description": "在这里您可以管理您的账户和查看统计数据",
+    "stats": {
+        "title": "统计数据",
+        "users": "总用户数",
+        "orders": "订单数",
+        "revenue": "收入",
+        "growth": "增长"
+    },
+    "charts": {
+        "title": "分析",
+        "salesChart": "销售图表",
+        "userChart": "用户增长",
+        "revenueChart": "收入图表"
+    },
+    "recentActivity": {
+        "title": "最近活动",
+        "noActivity": "没有最近活动",
+        "viewAll": "查看全部"
+    },
+    "quickActions": {
+        "title": "快速操作",
+        "addUser": "添加用户",
+        "createOrder": "创建订单",
+        "viewReports": "查看报告",
+        "settings": "设置"
+    }
+}
