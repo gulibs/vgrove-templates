@@ -9,9 +9,10 @@ import {
     Spinner
 } from '@heroui/react';
 import { LanguageSwitch } from '../components/LanguageSwitch';
+import type { I18nKeys } from '@/i18n-keys';
 
 export default function WelcomePage() {
-    const { t, locale, isReady } = useI18n();
+    const { t, locale, isReady } = useI18n<I18nKeys>();
 
     if (!isReady) {
         return (

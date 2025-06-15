@@ -1,8 +1,9 @@
 import { useI18n } from '@gulibs/react-autoroutes-client';
+import type { I18nKeys } from '@/i18n-keys';
 import './page.css';
 
 export default function HomePage() {
-    const { t, locale, setLocale, isReady, availableLocales } = useI18n();
+    const { t, locale, setLocale, isReady, availableLocales } = useI18n<I18nKeys>();
 
     // 语言切换
     const handleLanguageChange = async (newLocale: string) => {
