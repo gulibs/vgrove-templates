@@ -3,7 +3,7 @@
     "welcome": {
         "title": "欢迎使用 VGrove",
         "subtitle": "现代化的 React 开发工具包，支持自动路由和国际化",
-        "version": "v0.0.2"
+        "version": "v0.0.3"
     },
     "language": {
         "title": "语言设置",
