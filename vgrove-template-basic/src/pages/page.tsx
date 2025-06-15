@@ -12,7 +12,7 @@ export default function HomePage() {
     if (!isReady) {
         return (
             <div className="loading">
-                <div>{t('common.loading')}</div>
+                <div>{t('common.common.loading')}</div>
             </div>
         );
     }
@@ -20,12 +20,12 @@ export default function HomePage() {
     return (
         <div className="container">
             <div className="welcome-section">
-                <h1>{t('common.welcome')}</h1>
+                <h1>{t('common.common.welcome')}</h1>
                 <p>{t('app.description')}</p>
             </div>
 
             <div className="language-section">
-                <h3>{t('common.language')}</h3>
+                <h3>{t('common.common.language')}</h3>
                 <div className="language-switcher">
                     {availableLocales.map((lang) => (
                         <button
@@ -40,7 +40,7 @@ export default function HomePage() {
             </div>
 
             <div className="info-section">
-                <p><strong>{t('common.language')}:</strong> {locale}</p>
+                <p><strong>{t('common.common.language')}:</strong> {locale}</p>
                 <p><strong>Available:</strong> {availableLocales.join(', ')}</p>
             </div>
         </div>

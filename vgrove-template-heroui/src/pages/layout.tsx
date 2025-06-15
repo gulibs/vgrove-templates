@@ -1,7 +1,7 @@
-import { Outlet } from "react-router";
+import { Outlet } from 'react-router';
 
 const RootLayout = () => {
-    return <Outlet />
-}
+    return <Outlet />;
+};
 
 export default RootLayout;

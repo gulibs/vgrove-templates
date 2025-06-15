@@ -1,198 +1,160 @@
-import { Card, CardBody, CardHeader, Divider, Spacer } from '@heroui/react';
 import { useI18n } from '@gulibs/react-autoroutes-client';
-import LanguageSwitch, {
-    LanguageSwitchSelect,
-    LanguageSwitchButtons,
-    LanguageSwitchChips
-} from '../components/LanguageSwitch';
+import {
+    Card,
+    CardBody,
+    CardHeader,
+    Button,
+    Chip,
+    Divider,
+    Spinner
+} from '@heroui/react';
+import { LanguageSwitch } from '../components/LanguageSwitch';
 
-export default function LanguageDemoPage() {
-    const { t, locale, isReady, availableLocales } = useI18n();
+export default function WelcomePage() {
+    const { t, locale, isReady } = useI18n();
 
     if (!isReady) {
         return (
-            <div className="flex justify-center items-center min-h-screen">
-                <div className="text-lg">{t('common.common.loading')}</div>
+            <div className="flex items-center justify-center min-h-screen">
+                <Spinner size="lg" label={t('common.common.loading')} />
             </div>
         );
     }
 
     return (
-        <div className="container mx-auto p-6 max-w-4xl">
-            <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold mb-2">
-                    {t('common.common.switchLanguage')} 演示
-                </h1>
-                <p className="text-foreground-600">
-                    测试不同样式的语言切换组件
-                </p>
-            </div>
-
-            {/* 当前状态信息 */}
-            <Card className="mb-6">
-                <CardHeader>
-                    <h3 className="text-lg font-semibold">当前状态</h3>
-                </CardHeader>
-                <CardBody>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                        <div>
-                            <strong>当前语言:</strong> {locale}
-                        </div>
-                        <div>
-                            <strong>是否准备就绪:</strong> {isReady ? '是' : '否'}
-                        </div>
-                        <div>
-                            <strong>可用语言:</strong> {availableLocales.join(', ')}
-                        </div>
-                    </div>
-                </CardBody>
-            </Card>
-
-            {/* 翻译测试 */}
-            <Card className="mb-6">
-                <CardHeader>
-                    <h3 className="text-lg font-semibold">翻译测试</h3>
-                </CardHeader>
-                <CardBody>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <h4 className="font-medium mb-2">通用文本:</h4>
-                            <ul className="space-y-1 text-sm">
-                                <li><strong>欢迎:</strong> {t('common.common.welcome')}</li>
-                                <li><strong>加载中:</strong> {t('common.common.loading')}</li>
-                                <li><strong>成功:</strong> {t('common.common.success')}</li>
-                                <li><strong>错误:</strong> {t('common.common.error')}</li>
-                                <li><strong>保存:</strong> {t('common.common.save')}</li>
-                                <li><strong>取消:</strong> {t('common.common.cancel')}</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-medium mb-2">导航文本:</h4>
-                            <ul className="space-y-1 text-sm">
-                                <li><strong>首页:</strong> {t('common.nav.home')}</li>
-                                <li><strong>关于:</strong> {t('common.nav.about')}</li>
-                                <li><strong>仪表盘:</strong> {t('common.nav.dashboard')}</li>
-                                <li><strong>登录:</strong> {t('common.nav.login')}</li>
-                                <li><strong>设置:</strong> {t('common.nav.settings')}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </CardBody>
-            </Card>
-
-            {/* 语言切换组件演示 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-                {/* Select 样式 */}
-                <Card>
-                    <CardHeader>
-                        <h3 className="text-lg font-semibold">Select 下拉选择</h3>
-                    </CardHeader>
-                    <CardBody className="space-y-4">
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">默认样式</h4>
-                            <LanguageSwitchSelect />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">不显示标签</h4>
-                            <LanguageSwitchSelect showLabel={false} />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">小尺寸</h4>
-                            <LanguageSwitchSelect size="sm" />
-                        </div>
-                    </CardBody>
-                </Card>
-
-                {/* Button 样式 */}
-                <Card>
-                    <CardHeader>
-                        <h3 className="text-lg font-semibold">Button 按钮组</h3>
-                    </CardHeader>
-                    <CardBody className="space-y-4">
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">默认样式</h4>
-                            <LanguageSwitchButtons />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">不显示标签</h4>
-                            <LanguageSwitchButtons showLabel={false} />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">大尺寸</h4>
-                            <LanguageSwitchButtons size="lg" />
-                        </div>
-                    </CardBody>
-                </Card>
-
-                {/* Chip 样式 */}
-                <Card>
-                    <CardHeader>
-                        <h3 className="text-lg font-semibold">Chip 标签</h3>
-                    </CardHeader>
-                    <CardBody className="space-y-4">
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">默认样式</h4>
-                            <LanguageSwitchChips />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">不显示旗帜</h4>
-                            <LanguageSwitchChips showFlag={false} />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">小尺寸</h4>
-                            <LanguageSwitchChips size="sm" />
-                        </div>
-                    </CardBody>
-                </Card>
-
-                {/* 自定义样式 */}
-                <Card>
-                    <CardHeader>
-                        <h3 className="text-lg font-semibold">自定义样式</h3>
-                    </CardHeader>
-                    <CardBody className="space-y-4">
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">无标签无旗帜</h4>
-                            <LanguageSwitch variant="buttons" showLabel={false} showFlag={false} />
-                        </div>
-                        <Divider />
-                        <div>
-                            <h4 className="text-sm font-medium mb-2">紧凑版选择器</h4>
-                            <LanguageSwitch variant="select" size="sm" showLabel={false} />
-                        </div>
-                    </CardBody>
-                </Card>
-            </div>
-
-            <Spacer y={8} />
-
-            {/* 使用说明 */}
-            <Card>
-                <CardHeader>
-                    <h3 className="text-lg font-semibold">使用说明</h3>
-                </CardHeader>
-                <CardBody className="prose prose-sm max-w-none">
-                    <p>
-                        此页面演示了三种不同的语言切换组件样式：
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 p-6">
+            <div className="max-w-4xl mx-auto space-y-6">
+                {/* Header */}
+                <div className="text-center space-y-4">
+                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+                        {t('common.welcome.title')}
+                    </h1>
+                    <p className="text-lg text-gray-600 dark:text-gray-300">
+                        {t('common.welcome.subtitle')}
                     </p>
-                    <ul>
-                        <li><strong>Select:</strong> 下拉选择器，适合空间有限的场景</li>
-                        <li><strong>Buttons:</strong> 按钮组，直观明了，适合选项较少时使用</li>
-                        <li><strong>Chips:</strong> 标签样式，现代化设计，适合移动端</li>
-                    </ul>
-                    <p>
-                        每种样式都支持自定义尺寸、是否显示标签、是否显示旗帜等属性。
-                        切换语言后，页面上的所有文本都会立即更新。
-                    </p>
-                </CardBody>
-            </Card>
+                    <Chip color="primary" variant="flat">
+                        {t('common.welcome.version')}
+                    </Chip>
+                </div>
+
+                {/* Language Switch */}
+                <Card className="max-w-md mx-auto">
+                    <CardHeader className="pb-2">
+                        <h3 className="text-lg font-semibold">{t('common.language.title')}</h3>
+                    </CardHeader>
+                    <CardBody className="pt-0">
+                        <div className="space-y-4">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                                {t('common.language.description')}
+                            </p>
+                            <LanguageSwitch variant="buttons" size="md" />
+                            <div className="text-xs text-gray-500">
+                                {t('common.language.current')}: <strong>{locale}</strong>
+                            </div>
+                        </div>
+                    </CardBody>
+                </Card>
+
+                {/* Features Grid */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    {/* HeroUI Features */}
+                    <Card>
+                        <CardHeader>
+                            <h3 className="text-xl font-semibold text-primary">
+                                {t('common.features.heroui.title')}
+                            </h3>
+                        </CardHeader>
+                        <CardBody>
+                            <div className="space-y-3">
+                                <p className="text-gray-600 dark:text-gray-300">
+                                    {t('common.features.heroui.description')}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    {['Card', 'Button', 'Chip', 'Spinner'].map((component) => (
+                                        <Chip key={component} size="sm" variant="bordered">
+                                            {component}
+                                        </Chip>
+                                    ))}
+                                </div>
+                                <Button
+                                    color="primary"
+                                    variant="flat"
+                                    size="sm"
+                                    onPress={() => window.open('https://heroui.com', '_blank')}
+                                >
+                                    {t('common.features.heroui.learnMore')}
+                                </Button>
+                            </div>
+                        </CardBody>
+                    </Card>
+
+                    {/* i18n Features */}
+                    <Card>
+                        <CardHeader>
+                            <h3 className="text-xl font-semibold text-secondary">
+                                {t('common.features.i18n.title')}
+                            </h3>
+                        </CardHeader>
+                        <CardBody>
+                            <div className="space-y-3">
+                                <p className="text-gray-600 dark:text-gray-300">
+                                    {t('common.features.i18n.description')}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    <Chip size="sm" color="secondary" variant="flat">
+                                        🇺🇸 English
+                                    </Chip>
+                                    <Chip size="sm" color="secondary" variant="flat">
+                                        🇨🇳 中文
+                                    </Chip>
+                                </div>
+                                <Button
+                                    color="secondary"
+                                    variant="flat"
+                                    size="sm"
+                                >
+                                    {t('common.features.i18n.addLanguage')}
+                                </Button>
+                            </div>
+                        </CardBody>
+                    </Card>
+                </div>
+
+                <Divider />
+
+                {/* Getting Started */}
+                <Card>
+                    <CardHeader>
+                        <h3 className="text-xl font-semibold">{t('common.gettingStarted.title')}</h3>
+                    </CardHeader>
+                    <CardBody>
+                        <div className="space-y-4">
+                            <p className="text-gray-600 dark:text-gray-300">
+                                {t('common.gettingStarted.description')}
+                            </p>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                    <h4 className="font-medium">{t('common.gettingStarted.development')}</h4>
+                                    <code className="block p-2 bg-gray-100 dark:bg-gray-800 rounded text-sm">
+                                        vgrove dev
+                                    </code>
+                                </div>
+                                <div className="space-y-2">
+                                    <h4 className="font-medium">{t('common.gettingStarted.build')}</h4>
+                                    <code className="block p-2 bg-gray-100 dark:bg-gray-800 rounded text-sm">
+                                        vgrove build
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </CardBody>
+                </Card>
+
+                {/* Footer */}
+                <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+                    {t('common.footer.poweredBy')} VGrove + HeroUI + Tailwind CSS
+                </div>
+            </div>
         </div>
     );
 } 
