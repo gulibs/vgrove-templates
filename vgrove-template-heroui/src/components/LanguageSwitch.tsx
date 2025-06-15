@@ -19,11 +19,11 @@ export function LanguageSwitch({
     showLabel = true,
     showFlag = true
 }: LanguageSwitchProps) {
-    const { locale, changeLocale, availableLocales } = useI18n();
+    const { locale, setLocale, availableLocales } = useI18n();
 
     const handleLocaleChange = async (newLocale: string) => {
         try {
-            await changeLocale(newLocale);
+            await setLocale(newLocale);
         } catch (error) {
             console.error('Failed to change locale:', error);
         }
