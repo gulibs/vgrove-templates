@@ -1,5 +1,5 @@
 import { useI18n } from '@gulibs/react-autoroutes-client';
-import type { I18nKeys } from '@/i18n-keys';
+import type { I18nKeys } from '../i18n-keys';
 import './page.css';
 
 export default function HomePage() {
