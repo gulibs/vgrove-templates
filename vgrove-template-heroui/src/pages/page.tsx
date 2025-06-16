@@ -27,6 +27,9 @@ export default function WelcomePage() {
             <div className="max-w-4xl mx-auto space-y-6">
                 {/* Header */}
                 <div className="text-center space-y-4">
+                    <div className="flex justify-center">
+                        <Image src="/vgrove.svg" alt="vgrove" width={188} height={188} />
+                    </div>
                     <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
                         {t('common.welcome.title')}
                     </h1>

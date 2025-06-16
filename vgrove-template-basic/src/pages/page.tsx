@@ -21,6 +21,9 @@ export default function HomePage() {
     return (
         <div className="container">
             <div className="welcome-section">
+                <div className="vgrove-logo">
+                    <img src="/vgrove.svg" alt="vgrove" width={188} height={188} />
+                </div>
                 <h1>{t('common.common.welcome')}</h1>
                 <p>{t('app.description')}</p>
             </div>
