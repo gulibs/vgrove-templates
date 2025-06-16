@@ -1,6 +1,6 @@
 {
     "name": "vgrove-template-basic",
-    "version": "0.1.0",
+    "version": "0.0.0",
     "private": true,
     "type": "module",
     "scripts": {
@@ -12,6 +12,7 @@
     "dependencies": {
         "@gulibs/react-autoroutes-client": "^0.0.5",
         "@iconify/react": "^6.0.0",
+        "framer-motion": "^12.16.0",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "react-helmet-async": "^2.0.5",
@@ -25,7 +26,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.25.0",
-        "@gulibs/vgrove": "^0.0.3",
+        "@gulibs/vgrove": "^0.0.4",
         "@types/node": "^22.15.30",
         "@types/react": "^19.1.2",
         "@types/react-dom": "^19.1.2",
