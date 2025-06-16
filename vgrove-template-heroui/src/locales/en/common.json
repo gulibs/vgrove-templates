@@ -3,7 +3,7 @@
     "welcome": {
         "title": "Welcome to VGrove",
         "subtitle": "A modern React development toolkit with auto-routes and internationalization",
-        "version": "v0.0.10"
+        "version": "v0.0.13"
     },
     "language": {
         "title": "Language Settings",
