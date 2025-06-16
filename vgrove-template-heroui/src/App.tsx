@@ -1,7 +1,8 @@
-import { createI18nClient, I18nProvider } from '@gulibs/react-autoroutes-client';
-import { RouterProvider, createBrowserRouter } from 'react-router';
 import { resources, supportedLocales } from '@gulibs/i18n-locales';
 import { routes } from '@gulibs/react-autopages';
+import { createI18nClient, I18nProvider } from '@gulibs/react-autoroutes-client';
+import { HeroUIProvider } from '@heroui/react';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 const router = createBrowserRouter(routes);
 
@@ -14,9 +15,11 @@ const client = createI18nClient({
 function App() {
 
   return (
-    <I18nProvider client={client}>
-      <RouterProvider router={router} />
-    </I18nProvider>
+    <HeroUIProvider>
+      <I18nProvider client={client}>
+        <RouterProvider router={router} />
+      </I18nProvider>
+    </HeroUIProvider>
   )
 }
 
