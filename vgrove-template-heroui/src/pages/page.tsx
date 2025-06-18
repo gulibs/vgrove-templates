@@ -6,7 +6,8 @@ import {
     Button,
     Chip,
     Divider,
-    Spinner
+    Spinner,
+    Image
 } from '@heroui/react';
 import { LanguageSwitch } from '../components/LanguageSwitch';
 import type { I18nKeys } from '../i18n-keys';
