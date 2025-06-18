@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@gulibs/vgrove-ui": "^0.0.1",
-    "@gulibs/react-autoroutes-client": "0.0.10",
+    "@gulibs/react-autoroutes-client": "0.0.11",
     "@heroui/react": "^2.8.0-beta.7",
     "@iconify/react": "^6.0.0",
     "@tailwindcss/vite": "^4.1.8",
