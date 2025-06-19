@@ -10,8 +10,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@gulibs/vgrove-ui": "^0.0.1",
-        "@gulibs/react-autoroutes-client": "0.0.11",
+        "@gulibs/react-autoroutes-client": "0.0.15",
         "@iconify/react": "^6.0.0",
         "framer-motion": "^12.16.0",
         "react": "^19.1.0",
@@ -27,7 +26,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.25.0",
-        "@gulibs/vgrove": "0.0.12",
+        "@gulibs/vgrove": "0.0.13",
         "@types/node": "^22.15.30",
         "@types/react": "^19.1.2",
         "@types/react-dom": "^19.1.2",
