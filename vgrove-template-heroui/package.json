@@ -1,0 +1,40 @@
+{
+  "name": "vgrove-ui-x",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vgrove dev",
+    "build": "vgrove build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gulibs/vgrove-ui": "^0.0.9",
+    "axios": "^1.7.9",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@gulibs/vgrove-core": "^0.0.4",
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/crypto-js": "^4.2.2",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1"
+  }
+}

@@ -1,0 +1,276 @@
+/* 页面容器 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: var(--text-color);
+}
+
+/* 加载状态 */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.loading-text {
+  font-size: 1.125rem;
+  color: var(--text-color);
+}
+
+/* VGrove Logo */
+.vgrove-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo-image {
+  width: 128px;
+  height: 128px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* 欢迎区域 */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  background: linear-gradient(135deg, var(--link-color), #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome-section .description {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 语言区域 */
+.language-section {
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.language-section:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.language-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.language-info {
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.language-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.language-info strong {
+  color: var(--link-color);
+}
+
+/* 信息区域 */
+.info-section {
+  background: linear-gradient(135deg, var(--button-bg), var(--footer-bg));
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--link-color);
+}
+
+.feature-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--link-color);
+}
+
+.feature-item p {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 快速开始 */
+.quick-start {
+  background-color: var(--footer-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.quick-start h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.code-block {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--link-color);
+  white-space: pre;
+}
+
+.start-tip {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.start-tip code {
+  background-color: var(--button-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  color: var(--link-color);
+  border: 1px solid var(--border-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-section .description {
+    font-size: 1.125rem;
+  }
+
+  .logo-image {
+    width: 96px;
+    height: 96px;
+  }
+
+  .language-section,
+  .info-section,
+  .quick-start {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1.25rem;
+  }
+
+  .info-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .quick-start h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section .description {
+    font-size: 1rem;
+  }
+
+  .logo-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .language-section,
+  .info-section,
+  .quick-start {
+    padding: 1rem;
+  }
+
+  .code-block {
+    padding: 1rem;
+  }
+
+  .code-block pre {
+    font-size: 0.8rem;
+  }
+}

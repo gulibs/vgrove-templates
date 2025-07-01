@@ -1,0 +1,11 @@
+{
+    "common": {
+        "welcome": "Welcome",
+        "loading": "Loading...",
+        "language": "Language"
+    },
+    "app": {
+        "title": "VGrove Basic Template",
+        "description": "A modern React application with auto-routes and i18n support"
+    }
+}
