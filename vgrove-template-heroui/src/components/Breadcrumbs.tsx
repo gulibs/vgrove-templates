@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { Breadcrumbs as HeruiBreadcrumbs, BreadcrumbItem } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { useI18n } from '@gulibs/vgrove-client';
@@ -11,6 +11,7 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ className }: BreadcrumbsProps) {
     const { t } = useI18n();
     const location = useLocation();
+    const navigate = useNavigate();
 
     // 生成基于路径的面包屑导航
     const pathBreadcrumbs = useMemo(() => {
@@ -54,6 +55,11 @@ export function Breadcrumbs({ className }: BreadcrumbsProps) {
         return null;
     }
 
+    // 处理面包屑导航点击
+    const handleNavigate = (href: string) => {
+        navigate(href);
+    };
+
     return (
         <div className={className}>
             <HeruiBreadcrumbs
@@ -70,7 +76,7 @@ export function Breadcrumbs({ className }: BreadcrumbsProps) {
                     if (isLast) {
                         return (
                             <BreadcrumbItem key={item.key}>
-                                {item.icon && <Icon icon={item.icon} width={14} className="mr-1" />}
+                                {item.icon && typeof item.icon === 'string' && <Icon icon={item.icon} width={14} className="mr-1" />}
                                 {item.label}
                             </BreadcrumbItem>
                         );
@@ -79,8 +85,9 @@ export function Breadcrumbs({ className }: BreadcrumbsProps) {
                     return (
                         <BreadcrumbItem
                             key={item.key}
-                            href={item.href}
-                            startContent={item.icon && <Icon icon={item.icon} width={14} />}
+                            onPress={() => handleNavigate(item.href)}
+                            startContent={item.icon && typeof item.icon === 'string' ? <Icon icon={item.icon} width={14} /> : undefined}
+                            className="cursor-pointer"
                         >
                             {item.label}
                         </BreadcrumbItem>

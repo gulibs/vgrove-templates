@@ -34,7 +34,7 @@ const recentUsers = [
         id: 1,
         name: '张三',
         email: 'zhang.san@example.com',
-        avatar: 'https://i.pravatar.cc/150?u=zhang-san',
+        avatar: 'https://ui-avatars.com/api/?name=张三&background=3b82f6&color=fff&size=150',
         role: '管理员',
         status: 'online',
         lastSeen: '刚刚'
@@ -43,7 +43,7 @@ const recentUsers = [
         id: 2,
         name: '李四',
         email: 'li.si@example.com',
-        avatar: 'https://i.pravatar.cc/150?u=li-si',
+        avatar: 'https://ui-avatars.com/api/?name=李四&background=10b981&color=fff&size=150',
         role: '编辑',
         status: 'offline',
         lastSeen: '2小时前'
@@ -52,7 +52,7 @@ const recentUsers = [
         id: 3,
         name: '王五',
         email: 'wang.wu@example.com',
-        avatar: 'https://i.pravatar.cc/150?u=wang-wu',
+        avatar: 'https://ui-avatars.com/api/?name=王五&background=8b5cf6&color=fff&size=150',
         role: '用户',
         status: 'online',
         lastSeen: '5分钟前'
@@ -61,7 +61,7 @@ const recentUsers = [
         id: 4,
         name: 'Alex Smith',
         email: 'alex.smith@example.com',
-        avatar: 'https://i.pravatar.cc/150?u=alex-smith',
+        avatar: 'https://ui-avatars.com/api/?name=Alex+Smith&background=f59e0b&color=fff&size=150',
         role: '管理员',
         status: 'away',
         lastSeen: '30分钟前'
@@ -274,7 +274,7 @@ export default function DashboardExample() {
                                     </div>
                                     <Dropdown>
                                         <DropdownTrigger>
-                                            <Button isIconOnly variant="light" size="sm">
+                                            <Button isIconOnly variant="light" size="sm" aria-label="KPI actions">
                                                 <Icon icon="solar:menu-dots-line-duotone" width={16} />
                                             </Button>
                                         </DropdownTrigger>
@@ -361,7 +361,7 @@ export default function DashboardExample() {
                                                 <TableCell>
                                                     <Dropdown>
                                                         <DropdownTrigger>
-                                                            <Button isIconOnly variant="light" size="sm">
+                                                            <Button isIconOnly variant="light" size="sm" aria-label="Order actions">
                                                                 <Icon icon="solar:menu-dots-line-duotone" width={16} />
                                                             </Button>
                                                         </DropdownTrigger>
@@ -463,7 +463,7 @@ export default function DashboardExample() {
                                     系统通知
                                 </h2>
                                 <Badge content="4" color="danger" size="sm">
-                                    <Button isIconOnly variant="light" size="sm">
+                                    <Button isIconOnly variant="light" size="sm" aria-label="Notification settings">
                                         <Icon icon="solar:settings-line-duotone" width={16} />
                                     </Button>
                                 </Badge>

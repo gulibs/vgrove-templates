@@ -328,6 +328,7 @@ export default function ChartsDemo() {
                                         color="success"
                                         showValueLabel={true}
                                         className="scale-125"
+                                        aria-label="年度目标完成度: 78%"
                                     />
                                     <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                         年度目标完成度
@@ -341,19 +342,19 @@ export default function ChartsDemo() {
                                         <span className="text-sm">销售目标</span>
                                         <span className="text-sm font-medium">85%</span>
                                     </div>
-                                    <Progress value={85} color="primary" />
+                                    <Progress value={85} color="primary" aria-label="销售目标: 85%" />
 
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">用户增长</span>
                                         <span className="text-sm font-medium">72%</span>
                                     </div>
-                                    <Progress value={72} color="secondary" />
+                                    <Progress value={72} color="secondary" aria-label="用户增长: 72%" />
 
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">市场占有率</span>
                                         <span className="text-sm font-medium">91%</span>
                                     </div>
-                                    <Progress value={91} color="success" />
+                                    <Progress value={91} color="success" aria-label="市场占有率: 91%" />
                                 </div>
                             </div>
                         </CardBody>

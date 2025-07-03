@@ -17,12 +17,15 @@ import {
 } from '@heroui/react';
 import { useI18n } from '@gulibs/vgrove-client';
 import { Icon } from '@iconify/react';
-import { useTheme } from 'next-themes';
+// import { useTheme } from '@gulibs/vgrove-ui';
+// 暂时移除 useTheme 使用，因为 template 使用的是独立的主题系统
+// import { useTheme } from 'next-themes';
 import { useState } from 'react';
 
 export default function ThemesDemo() {
     const { t } = useI18n();
-    const { theme, setTheme } = useTheme();
+    // 移除 useTheme 使用，改为使用本地状态
+    const [theme, setTheme] = useState('system');
     const [customColors] = useState({
         primary: '#3b82f6',
         secondary: '#8b5cf6',
@@ -74,11 +77,11 @@ export default function ThemesDemo() {
             category: '进度条',
             components: (
                 <div className="space-y-3 w-full">
-                    <Progress value={75} color="primary" label="Primary" />
-                    <Progress value={60} color="secondary" label="Secondary" />
-                    <Progress value={85} color="success" label="Success" />
-                    <Progress value={45} color="warning" label="Warning" />
-                    <Progress value={30} color="danger" label="Danger" />
+                    <Progress value={75} color="primary" label="Primary" aria-label="Primary progress: 75%" />
+                    <Progress value={60} color="secondary" label="Secondary" aria-label="Secondary progress: 60%" />
+                    <Progress value={85} color="success" label="Success" aria-label="Success progress: 85%" />
+                    <Progress value={45} color="warning" label="Warning" aria-label="Warning progress: 45%" />
+                    <Progress value={30} color="danger" label="Danger" aria-label="Danger progress: 30%" />
                 </div>
             )
         }

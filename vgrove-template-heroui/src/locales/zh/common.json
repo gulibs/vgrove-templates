@@ -744,5 +744,20 @@
             "title": "设置示例",
             "subtitle": "应用配置和偏好设置"
         }
+    },
+    "debug": {
+        "title": "调试信息",
+        "current_locale": "当前语言",
+        "ready_status": "就绪状态",
+        "available_locales": "可用语言",
+        "virtual_module": "虚拟模块",
+        "config_source": "配置来源",
+        "default_locale": "默认语言",
+        "ready": "已就绪",
+        "loading": "加载中...",
+        "enabled": "已启用",
+        "disabled": "未启用",
+        "from_virtual_module": "来自虚拟模块",
+        "manual_config": "手动配置"
     }
 }

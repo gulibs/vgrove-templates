@@ -24,9 +24,19 @@ interface AuthUser {
     permissions: string[];
 }
 
+interface GuardContext {
+    path: string;
+    params: Record<string, string>;
+    query: Record<string, string>;
+    user: AuthUser | null;
+    roles: string[];
+    permissions: string[];
+    data: Record<string, unknown>;
+}
+
 interface GuardConfig {
     name?: string;
-    check?: (context: any) => Promise<boolean> | boolean;
+    check?: (context: GuardContext) => Promise<boolean> | boolean;
     roles?: string[];
     permissions?: string[];
     errorMessage?: string;

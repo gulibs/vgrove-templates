@@ -20,7 +20,7 @@ import { useI18n } from '@gulibs/vgrove-client';
 import type { I18nKeys } from '@/i18n-keys';
 
 export default function I18nDemo() {
-    const { locale, t, availableLocales, setLocale } = useI18n<I18nKeys>();
+    const { locale, t, availableLocales, setLocale, isReady, isUsingVirtualModule, availableKeys } = useI18n<I18nKeys>();
 
     const codeExamples = {
         basic: `// 基础使用
@@ -338,6 +338,45 @@ export default {
                             </div>
                         </CardBody>
                     </Card>
+
+                    {/* 调试信息 */}
+                    <Card className="p-6">
+                        <h3 className="text-lg font-semibold mb-4">{t('debug.title')}</h3>
+                        <div className="space-y-2 text-sm">
+                            <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                    <strong>{t('debug.current_locale')}:</strong> {locale}
+                                </div>
+                                <div>
+                                    <strong>{t('debug.ready_status')}:</strong> {isReady ? `✅ ${t('debug.ready')}` : `⏳ ${t('debug.loading')}`}
+                                </div>
+                                <div>
+                                    <strong>{t('debug.available_locales')}:</strong> {availableLocales.join(', ')}
+                                </div>
+                                <div>
+                                    <strong>{t('debug.virtual_module')}:</strong> {isUsingVirtualModule ? `✅ ${t('debug.enabled')}` : `❌ ${t('debug.disabled')}`}
+                                </div>
+                                <div>
+                                    <strong>{t('debug.config_source')}:</strong> {isUsingVirtualModule ? `✅ ${t('debug.from_virtual_module')}` : `❌ ${t('debug.manual_config')}`}
+                                </div>
+                                <div>
+                                    <strong>{t('debug.default_locale')}:</strong> vgrove.config.ts ({availableLocales.includes('zh') ? 'zh' : 'en'})
+                                </div>
+                            </div>
+                            <div>
+                                <strong>持久化存储:</strong> {
+                                    typeof window !== 'undefined' && localStorage.getItem('vgrove_user_locale')
+                                        ? `✅ ${localStorage.getItem('vgrove_user_locale')}`
+                                        : '❌ 无'
+                                }
+                            </div>
+                            <div>
+                                <strong>翻译键总数:</strong> {availableKeys.length}
+                            </div>
+                        </div>
+                    </Card>
+
+                    {/* 语言测试 */}
                 </div>
             </div>
         </PageContainer>

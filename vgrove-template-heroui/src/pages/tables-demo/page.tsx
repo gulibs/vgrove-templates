@@ -1,28 +1,28 @@
-import {
-    PageContainer,
-    I18nMessage
-} from '@gulibs/vgrove-ui';
-import {
-    Table,
-    TableHeader,
-    TableColumn,
-    TableBody,
-    TableRow,
-    TableCell,
-    User,
-    Chip,
-    Button,
-    DropdownTrigger,
-    Dropdown,
-    DropdownMenu,
-    DropdownItem,
-    Input,
-    Pagination
-} from '@heroui/react';
-import type { Selection, SortDescriptor, ChipProps } from '@heroui/react';
-import { Icon } from '@iconify/react';
-import { useState, useMemo, useCallback } from 'react';
 import { useI18n } from '@gulibs/vgrove-client';
+import {
+    I18nMessage,
+    PageContainer
+} from '@gulibs/vgrove-ui';
+import type { ChipProps, Selection, SortDescriptor } from '@heroui/react';
+import {
+    Button,
+    Chip,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+    Input,
+    Pagination,
+    Table,
+    TableBody,
+    TableCell,
+    TableColumn,
+    TableHeader,
+    TableRow,
+    User
+} from '@heroui/react';
+import { Icon } from '@iconify/react';
+import { useCallback, useMemo, useState } from 'react';
 
 // 示例数据
 const users = [
@@ -33,7 +33,7 @@ const users = [
         team: "development",
         status: "active",
         age: 29,
-        avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+        avatar: "https://ui-avatars.com/api/?name=张三&background=3b82f6&color=fff&size=150",
         email: "zhangsan@example.com",
         phone: "13800138001"
     },
@@ -44,7 +44,7 @@ const users = [
         team: "product",
         status: "paused",
         age: 25,
-        avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        avatar: "https://ui-avatars.com/api/?name=李四&background=10b981&color=fff&size=150",
         email: "lisi@example.com",
         phone: "13800138002"
     },
@@ -55,7 +55,7 @@ const users = [
         team: "design",
         status: "active",
         age: 28,
-        avatar: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+        avatar: "https://ui-avatars.com/api/?name=王五&background=8b5cf6&color=fff&size=150",
         email: "wangwu@example.com",
         phone: "13800138003"
     },
@@ -66,7 +66,7 @@ const users = [
         team: "testing",
         status: "vacation",
         age: 26,
-        avatar: "https://i.pravatar.cc/150?u=a048581f4e29026701d",
+        avatar: "https://ui-avatars.com/api/?name=赵六&background=f59e0b&color=fff&size=150",
         email: "zhaoliu@example.com",
         phone: "13800138004"
     },
@@ -77,7 +77,7 @@ const users = [
         team: "product",
         status: "active",
         age: 32,
-        avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
+        avatar: "https://ui-avatars.com/api/?name=孙七&background=ef4444&color=fff&size=150",
         email: "sunqi@example.com",
         phone: "13800138005"
     },
@@ -88,7 +88,7 @@ const users = [
         team: "operations",
         status: "active",
         age: 24,
-        avatar: "https://i.pravatar.cc/150?u=a042581f4e29027007d",
+        avatar: "https://ui-avatars.com/api/?name=周八&background=6366f1&color=fff&size=150",
         email: "zhouba@example.com",
         phone: "13800138006"
     },
@@ -99,7 +99,7 @@ const users = [
         team: "sales",
         status: "paused",
         age: 30,
-        avatar: "https://i.pravatar.cc/150?u=a042581f4e29027008d",
+        avatar: "https://ui-avatars.com/api/?name=吴九&background=14b8a6&color=fff&size=150",
         email: "wujiu@example.com",
         phone: "13800138007"
     }
@@ -215,7 +215,7 @@ export default function TablesDemo() {
                     <div className="relative flex justify-end items-center gap-2">
                         <Dropdown>
                             <DropdownTrigger>
-                                <Button isIconOnly size="sm" variant="light">
+                                <Button isIconOnly size="sm" variant="light" aria-label="User actions">
                                     <Icon icon="solar:menu-dots-vertical-line-duotone" width={16} />
                                 </Button>
                             </DropdownTrigger>
@@ -291,7 +291,7 @@ export default function TablesDemo() {
                         <Dropdown>
                             <DropdownTrigger className="hidden sm:flex">
                                 <Button endContent={<Icon icon="solar:alt-arrow-down-line-duotone" />} variant="flat">
-                                    {t("common.status")}
+                                    {t("common.tables.status")}
                                 </Button>
                             </DropdownTrigger>
                             <DropdownMenu

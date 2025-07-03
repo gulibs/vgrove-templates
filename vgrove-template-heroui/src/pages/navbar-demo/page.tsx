@@ -161,7 +161,7 @@ export default function NavbarDemoPage() {
             <Dropdown>
                 <DropdownTrigger>
                     <Avatar
-                        src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                        src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=150"
                         size="sm"
                         className="cursor-pointer"
                     />

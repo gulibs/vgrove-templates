@@ -137,7 +137,7 @@ export default function FormDemo() {
                             placeholder={t('common.form.passwordPlaceholder')}
                             startContent={<Icon icon="solar:lock-line-duotone" />}
                             endContent={
-                                <button type="button">
+                                <button type="button" aria-label="Toggle password visibility">
                                     <Icon icon="solar:eye-line-duotone" width={18} />
                                 </button>
                             }
@@ -258,6 +258,7 @@ export default function FormDemo() {
                                 step={1}
                                 showTooltip
                                 className="max-w-md"
+                                aria-label={t('common.form.experience')}
                             />
                         </div>
 

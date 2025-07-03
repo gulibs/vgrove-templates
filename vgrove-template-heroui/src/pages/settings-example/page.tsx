@@ -463,7 +463,7 @@ export default function SettingsExample() {
                                                 </Chip>
                                                 <Dropdown>
                                                     <DropdownTrigger>
-                                                        <Button isIconOnly variant="light" size="sm">
+                                                        <Button isIconOnly variant="light" size="sm" aria-label="Integration actions">
                                                             <Icon icon="solar:menu-dots-line-duotone" width={16} />
                                                         </Button>
                                                     </DropdownTrigger>

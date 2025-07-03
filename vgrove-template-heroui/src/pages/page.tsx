@@ -62,7 +62,7 @@ export default function HomePage() {
         {
             id: 1,
             user: '张三',
-            avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d',
+            avatar: 'https://ui-avatars.com/api/?name=张三&background=3b82f6&color=fff&size=150',
             action: '创建了新项目',
             target: 'VGrove Dashboard',
             time: '2分钟前',
@@ -71,7 +71,7 @@ export default function HomePage() {
         {
             id: 2,
             user: '李四',
-            avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+            avatar: 'https://ui-avatars.com/api/?name=李四&background=10b981&color=fff&size=150',
             action: '更新了组件',
             target: 'Button 组件',
             time: '5分钟前',
@@ -80,7 +80,7 @@ export default function HomePage() {
         {
             id: 3,
             user: '王五',
-            avatar: 'https://i.pravatar.cc/150?u=a04258114e29026702d',
+            avatar: 'https://ui-avatars.com/api/?name=王五&background=8b5cf6&color=fff&size=150',
             action: '部署了应用',
             target: '生产环境',
             time: '10分钟前',
@@ -89,7 +89,7 @@ export default function HomePage() {
         {
             id: 4,
             user: '赵六',
-            avatar: 'https://i.pravatar.cc/150?u=a048581f4e29026701d',
+            avatar: 'https://ui-avatars.com/api/?name=赵六&background=f59e0b&color=fff&size=150',
             action: '添加了新功能',
             target: '国际化支持',
             time: '1小时前',
@@ -104,9 +104,9 @@ export default function HomePage() {
             progress: 85,
             status: 'active',
             team: [
-                'https://i.pravatar.cc/150?u=a042581f4e29026024d',
-                'https://i.pravatar.cc/150?u=a042581f4e29026704d',
-                'https://i.pravatar.cc/150?u=a04258114e29026702d'
+                'https://ui-avatars.com/api/?name=UI&background=3b82f6&color=fff&size=150',
+                'https://ui-avatars.com/api/?name=Dev&background=10b981&color=fff&size=150',
+                'https://ui-avatars.com/api/?name=QA&background=8b5cf6&color=fff&size=150'
             ],
             tech: ['React', 'TypeScript', 'HeroUI']
         },
@@ -116,8 +116,8 @@ export default function HomePage() {
             progress: 92,
             status: 'active',
             team: [
-                'https://i.pravatar.cc/150?u=a048581f4e29026701d',
-                'https://i.pravatar.cc/150?u=a092581d4ef9026700d'
+                'https://ui-avatars.com/api/?name=Client&background=f59e0b&color=fff&size=150',
+                'https://ui-avatars.com/api/?name=Core&background=ef4444&color=fff&size=150'
             ],
             tech: ['TypeScript', 'Vite', 'i18n']
         },
@@ -127,8 +127,8 @@ export default function HomePage() {
             progress: 78,
             status: 'active',
             team: [
-                'https://i.pravatar.cc/150?u=a042581f4e29027007d',
-                'https://i.pravatar.cc/150?u=a042581f4e29027008d'
+                'https://ui-avatars.com/api/?name=Build&background=6366f1&color=fff&size=150',
+                'https://ui-avatars.com/api/?name=CLI&background=14b8a6&color=fff&size=150'
             ],
             tech: ['Node.js', 'CLI', 'Build Tools']
         }
@@ -287,6 +287,7 @@ export default function HomePage() {
                                         color="primary"
                                         showValueLabel
                                         className="w-full"
+                                        aria-label={`${project.name} progress: ${project.progress}%`}
                                     />
 
                                     <div className="flex gap-2">

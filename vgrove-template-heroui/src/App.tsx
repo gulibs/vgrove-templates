@@ -51,9 +51,19 @@ const rootLayoutSettings: LayoutSettings = {
 const router = createBrowserRouter(routes);
 
 const client = createI18nClient({
+  // 传入资源以确保向后兼容
   resources,
   supportedLocales,
-  defaultLocale: 'zh'
+  // 自定义持久化配置（可选，会与默认配置合并）
+  persistence: {
+    key: 'vgrove_user_locale' // 自定义存储键，storage 和 enabled 使用默认值
+  },
+  // 启用浏览器语言检测（作为备选方案）
+  detectBrowserLanguage: false, // 优先使用用户手动选择的语言
+  // 启用回退到默认语言
+  fallbackToDefault: true,
+  // 开发环境下启用调试模式
+  debug: process.env.NODE_ENV === 'development'
 });
 
 function App() {

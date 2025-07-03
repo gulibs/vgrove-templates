@@ -34,7 +34,7 @@ const userData = {
     name: '张三',
     email: 'zhang.san@example.com',
     phone: '+86 138 0013 8000',
-    avatar: 'https://i.pravatar.cc/150?u=zhang-san',
+    avatar: 'https://ui-avatars.com/api/?name=张三&background=3b82f6&color=fff&size=150',
     role: '产品经理',
     department: '产品部',
     location: '北京, 中国',
@@ -103,10 +103,10 @@ const skillsData = [
 ];
 
 const teamMembers = [
-    { name: '李四', role: '前端工程师', avatar: 'https://i.pravatar.cc/150?u=li-si' },
-    { name: '王五', role: 'UI设计师', avatar: 'https://i.pravatar.cc/150?u=wang-wu' },
-    { name: 'Alex', role: '后端工程师', avatar: 'https://i.pravatar.cc/150?u=alex' },
-    { name: 'Sarah', role: '测试工程师', avatar: 'https://i.pravatar.cc/150?u=sarah' }
+    { name: '李四', role: '前端工程师', avatar: 'https://ui-avatars.com/api/?name=李四&background=10b981&color=fff&size=150' },
+    { name: '王五', role: 'UI设计师', avatar: 'https://ui-avatars.com/api/?name=王五&background=8b5cf6&color=fff&size=150' },
+    { name: 'Alex', role: '后端工程师', avatar: 'https://ui-avatars.com/api/?name=Alex&background=f59e0b&color=fff&size=150' },
+    { name: 'Sarah', role: '测试工程师', avatar: 'https://ui-avatars.com/api/?name=Sarah&background=ef4444&color=fff&size=150' }
 ];
 
 export default function ProfileExample() {
@@ -287,6 +287,7 @@ export default function ProfileExample() {
                                                     value={skill.level}
                                                     color="primary"
                                                     className="w-full"
+                                                    aria-label={`${skill.name} skill level: ${skill.level}%`}
                                                 />
                                             </div>
                                         ))}
@@ -340,7 +341,7 @@ export default function ProfileExample() {
                                                     <p className="font-medium text-sm">{member.name}</p>
                                                     <p className="text-xs text-default-500">{member.role}</p>
                                                 </div>
-                                                <Button isIconOnly variant="light" size="sm">
+                                                <Button isIconOnly variant="light" size="sm" aria-label="Send message">
                                                     <Icon icon="solar:chat-line-duotone" width={16} />
                                                 </Button>
                                             </div>
