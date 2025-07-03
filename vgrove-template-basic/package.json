@@ -10,7 +10,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@gulibs/vgrove-client": "^0.0.11",
+        "@gulibs/vgrove-client": "^0.0.12",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "react-router": "^7.6.2"

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gulibs/vgrove-ui": "^0.0.13",
+    "@gulibs/vgrove-ui": "^0.0.14",
     "axios": "^1.7.9",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
