@@ -77,7 +77,7 @@ VGrove 模板集合，提供两种不同复杂度的项目模板，满足不同�
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.6.2",
-    "react-router-dom": "^7.6.2"
+    "react-router": "^7.6.2"
   },
   "devDependencies": {
     "@gulibs/vgrove-core": "^0.0.4"
@@ -93,7 +93,7 @@ VGrove 模板集合，提供两种不同复杂度的项目模板，满足不同�
     "@gulibs/vgrove-ui": "^0.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.2"
+    "react-router": "^7.6.2"
   },
   "devDependencies": {
     "@gulibs/vgrove-core": "^0.0.4",
