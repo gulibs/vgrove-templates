@@ -1,6 +1,6 @@
 import { resources, supportedLocales } from '@gulibs/i18n-locales';
 import { routes } from '@gulibs/react-autopages';
-import { createI18nClient, I18nProvider } from '@gulibs/vgrove-client';
+import { createI18nClient, I18nProvider } from '@gulibs/vgrove-ui';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { VGroveProvider } from '@gulibs/vgrove-ui';
 import type { LayoutSettings } from '@gulibs/vgrove-ui';

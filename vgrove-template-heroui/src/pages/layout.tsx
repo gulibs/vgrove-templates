@@ -1,6 +1,6 @@
 import type { SidebarMenuGroupItems } from '@gulibs/vgrove-ui';
 import { VGroveLayout, Brand } from '@gulibs/vgrove-ui';
-import { useI18n } from '@gulibs/vgrove-client';
+import { useI18n } from '@gulibs/vgrove-ui';
 import { Outlet } from 'react-router';
 
 const RootLayout = () => {

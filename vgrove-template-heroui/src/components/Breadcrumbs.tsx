@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { Breadcrumbs as HeruiBreadcrumbs, BreadcrumbItem } from '@heroui/react';
 import { Icon } from '@iconify/react';
-import { useI18n } from '@gulibs/vgrove-client';
+import { useI18n } from '@gulibs/vgrove-ui';
 
 interface BreadcrumbsProps {
     className?: string;
@@ -43,7 +43,7 @@ export function Breadcrumbs({ className }: BreadcrumbsProps) {
                 key: segment,
                 href: currentPath,
                 label,
-                icon: getSegmentIcon(segment)
+                icon: getSegmentIcon(segment) || ""
             });
         });
 

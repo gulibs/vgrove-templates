@@ -1,6 +1,7 @@
-import { defineHandle } from '@gulibs/vgrove-client';
+import type { I18nKeys } from '@/i18n-keys';
+import type { PageHandle } from '@gulibs/vgrove-ui';
 
-const handle = defineHandle({
+const handle: PageHandle<I18nKeys> = {
     meta: {
         title: 'common.common.home.title',
         description: 'VGrove HeroUI Template - Modern React application template'
@@ -13,6 +14,6 @@ const handle = defineHandle({
         href: '/',
         className: 'text-primary'
     }
-});
+}
 
 export default handle; 

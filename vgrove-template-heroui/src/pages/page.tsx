@@ -1,4 +1,4 @@
-import { useI18n } from '@gulibs/vgrove-client';
+import { useI18n } from '@gulibs/vgrove-ui';
 import {
     I18nSwitch,
     PageContainer,

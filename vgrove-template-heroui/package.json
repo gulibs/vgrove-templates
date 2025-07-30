@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@gulibs/vgrove-ui": "^0.0.38",
+    "@gulibs/vgrove-ui": "^0.0.169",
     "axios": "^1.7.9",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
-    "@gulibs/vgrove-core": "^0.0.12",
+    "@gulibs/vgrove-core": "^0.0.166",
     "@tailwindcss/vite": "^4.1.11",
     "@types/crypto-js": "^4.2.2",
     "@types/lodash": "^4.17.13",
